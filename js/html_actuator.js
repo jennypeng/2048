@@ -4,7 +4,7 @@ function HTMLActuator() {
   this.messageContainer = document.getElementsByClassName("game-message")[0];
   this.sharingContainer = document.getElementsByClassName("score-sharing")[0];
 
-  this.score = 0;
+  this.score = 200000;
 }
 
 HTMLActuator.prototype.actuate = function (grid, metadata) {
@@ -31,6 +31,7 @@ HTMLActuator.prototype.actuate = function (grid, metadata) {
 HTMLActuator.prototype.restart = function () {
   if (ga) ga("send", "event", "game", "restart");
   this.clearMessage();
+  document.getElementById("audiotag").pause();
 };
 
 HTMLActuator.prototype.clearContainer = function (container) {
@@ -107,12 +108,14 @@ HTMLActuator.prototype.updateScore = function (score) {
 
 HTMLActuator.prototype.message = function (won) {
   var type    = won ? "game-won" : "game-over";
-  var message = won ? "You win!" : "Game over!"
+  var message = won ? "adequate performance yo" : "Game over!"
 
   if (ga) ga("send", "event", "game", "end", type, this.score);
 
   this.messageContainer.classList.add(type);
   this.messageContainer.getElementsByTagName("p")[0].textContent = message;
+  document.getElementById("audiotag").currentTime=0;
+  document.getElementById("audiotag").play();
 
   this.clearContainer(this.sharingContainer);
   this.sharingContainer.appendChild(this.scoreTweetButton());
