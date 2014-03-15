@@ -107,8 +107,17 @@ HTMLActuator.prototype.updateScore = function (score) {
 };
 
 HTMLActuator.prototype.message = function (won) {
+  var seed = Math.floor(Date.now()); // Math.floor(Date.now()/(1000*3600*24))
+  var won_messages = [
+    "adequate performance yo",
+    "you have climbed this mountain",
+    "wow, that was really hard",
+    "you must be so proud of yourself",
+  ];
+  var lost_message = "Game over!";
+
   var type    = won ? "game-won" : "game-over";
-  var message = won ? "adequate performance yo" : "Game over!"
+  var message = won ? won_messages[seed % won_messages.length] : lost_message;
 
   if (ga) ga("send", "event", "game", "end", type, this.score);
 
