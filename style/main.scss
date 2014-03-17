@@ -422,13 +422,20 @@ hr {
 }
 
 .sharing {
-  margin-top: 20px;
+  margin-top: 10px;
   text-align: center;
+  line-height: 2em;
 
   > iframe, span {
     display: inline-block;
     vertical-align: middle;
   }
+}
+
+.adsbygoogle-container {
+  margin: 0 -5px 0 -20px;
+  overflow-x: auto;
+  text-align: center;
 }
 
 @include smaller(480px) {

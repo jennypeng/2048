@@ -30,7 +30,6 @@ h1.title {
   100% {
     top: -50px;
     opacity: 0; } }
-
 @-moz-keyframes move-up {
   0% {
     top: 25px;
@@ -39,7 +38,6 @@ h1.title {
   100% {
     top: -50px;
     opacity: 0; } }
-
 @keyframes move-up {
   0% {
     top: 25px;
@@ -48,7 +46,6 @@ h1.title {
   100% {
     top: -50px;
     opacity: 0; } }
-
 .score-container {
   position: relative;
   float: right;
@@ -116,21 +113,18 @@ hr {
 
   100% {
     opacity: 1; } }
-
 @-moz-keyframes fade-in {
   0% {
     opacity: 0; }
 
   100% {
     opacity: 1; } }
-
 @keyframes fade-in {
   0% {
     opacity: 0; }
 
   100% {
     opacity: 1; } }
-
 .game-container {
   margin-top: 40px;
   position: relative;
@@ -161,11 +155,11 @@ hr {
     -webkit-animation-fill-mode: both;
     -moz-animation-fill-mode: both; }
     .game-container .game-message p {
-      font-size: 50px; /* 60px */
+      font-size: 60px;
       font-weight: bold;
-      height: 90px; /* 60px; */
+      height: 60px;
       line-height: 60px;
-    margin-top: 192px; /* 222px; */ }
+      margin-top: 222px; }
     .game-container .game-message .lower {
       display: block;
       margin-top: 59px; }
@@ -365,7 +359,6 @@ hr {
     opacity: 1;
     -webkit-transform: scale(1);
     -moz-transform: scale(1); } }
-
 @-moz-keyframes appear {
   0% {
     opacity: 0;
@@ -376,7 +369,6 @@ hr {
     opacity: 1;
     -webkit-transform: scale(1);
     -moz-transform: scale(1); } }
-
 @keyframes appear {
   0% {
     opacity: 0;
@@ -387,7 +379,6 @@ hr {
     opacity: 1;
     -webkit-transform: scale(1);
     -moz-transform: scale(1); } }
-
 .tile-new {
   -webkit-animation: appear 200ms ease 100ms;
   -moz-animation: appear 200ms ease 100ms;
@@ -406,7 +397,6 @@ hr {
   100% {
     -webkit-transform: scale(1);
     -moz-transform: scale(1); } }
-
 @-moz-keyframes pop {
   0% {
     -webkit-transform: scale(0);
@@ -419,7 +409,6 @@ hr {
   100% {
     -webkit-transform: scale(1);
     -moz-transform: scale(1); } }
-
 @keyframes pop {
   0% {
     -webkit-transform: scale(0);
@@ -432,7 +421,6 @@ hr {
   100% {
     -webkit-transform: scale(1);
     -moz-transform: scale(1); } }
-
 .tile-merged {
   z-index: 20;
   -webkit-animation: pop 200ms ease 100ms;
@@ -447,11 +435,17 @@ hr {
   margin-top: 50px; }
 
 .sharing {
-  margin-top: 20px;
-  text-align: center; }
+  margin-top: 10px;
+  text-align: center;
+  line-height: 2em; }
   .sharing > iframe, .sharing span {
     display: inline-block;
     vertical-align: middle; }
+
+.adsbygoogle-container {
+  margin: 0 -5px 0 -20px;
+  overflow-x: auto;
+  text-align: center; }
 
 @media screen and (max-width: 480px) {
   html, body {
